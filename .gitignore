@@ -1,0 +1,13 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Webpack directories
+.webpack
+
+# musl-gcc
+x86_64-linux-musl-native.tgz
+cc

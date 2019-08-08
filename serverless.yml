@@ -1,0 +1,31 @@
+service:
+  name: serverless-simple-cpp-compiler
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: ap-northeast-2
+  tracing:
+    apiGateway: true
+    lambda: true
+
+functions:
+  index:
+    handler: handler.index
+    events:
+      - http:
+          method: get
+          path: "/"
+  run:
+    handler: handler.run
+    timeout: 30
+    memorySize: 2048
+    events:
+      - http:
+          method: post
+          path: run
+          cors: true

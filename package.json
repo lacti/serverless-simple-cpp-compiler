@@ -1,0 +1,42 @@
+{
+  "name": "serverless-simple-cpp-compiler",
+  "version": "1.0.0",
+  "description": "A simple wrapper of musl-gcc over AWS Lambda",
+  "main": "handler.ts",
+  "scripts": {
+    "postinstall": "/bin/bash .postinstall.sh",
+    "start": "sls offline",
+    "build": "sls package",
+    "status": "sls info",
+    "deploy": "sls deploy"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "p-time": "^2.1.0",
+    "p-timeout": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "source-map-support": "^0.5.10",
+    "targz": "^1.0.1",
+    "time-span": "^3.1.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.31",
+    "@types/fs-extra": "^8.0.0",
+    "@types/node": "10",
+    "@types/rimraf": "^2.0.2",
+    "@types/targz": "^1.0.0",
+    "@types/uuid": "^3.4.5",
+    "copy-webpack-plugin": "^5.0.4",
+    "serverless": "^1.49.0",
+    "serverless-offline": "^5.9.0",
+    "serverless-webpack": "^5.3.1",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1"
+  },
+  "author": "jaeyoung.choi <lactrious@gmail.com>",
+  "license": "MIT"
+}
